@@ -1,7 +1,12 @@
 <?php
-    $inivariabel = "Ini adalah konfigurasi penting.";
-    function myfunction($inivariabel) {
-        return $inivariabel;
-    }
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $dbname = "smk_db";
     
+    $conn = new mysqli($host, $user, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 ?>
